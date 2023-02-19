@@ -1,0 +1,43 @@
+@import "./mixin";
+@import "./variables";
+
+.footer {
+    padding-top: 84px;
+    padding-bottom: 35px;
+
+    background-color: #0d0d0d;
+
+    width: 100%;
+
+    &-wrapper {
+        @include displayFlex(flex-start, flex-start, column);
+        gap: 27px;
+
+        width: 100%;
+    }
+
+    & .logo{
+        max-width: 176px;
+        max-height: 41px;
+    }
+
+    &-top {
+        @include displayFlex(center, space-between);
+        gap: 30px;
+
+        flex-wrap: wrap;
+
+        width: 100%;
+    }
+
+    & .menu-item__link {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &-bottom {
+        @include displayFlex(flex-start, space-between);
+        gap: 30px;
+
+        width: 100%;
+    }
+}

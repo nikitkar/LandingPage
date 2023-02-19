@@ -1,0 +1,66 @@
+@import "./mixin";
+@import "./variables";
+
+.header {
+    padding-top: 30px;
+
+    background-image: url(../assets/images/header/header-db.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 1090px;
+
+    margin-bottom: 320px;
+
+    &-wrapper {
+        @include displayFlex(center, flex-start, column);
+        gap: 100px;
+    }
+
+    &-top {
+        @include displayFlex(center, space-between);
+        gap: 30px;
+
+        flex-wrap: wrap;
+    }
+
+    &-body {
+        @include displayFlex(center, flex-start, column);
+        gap: 90px;
+
+        width: 100%;
+
+        &-wrap {
+            @include displayFlex(center, flex-start, column);
+            gap: 40px;
+
+            width: 100%;
+        }
+
+        &-img {
+            width: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &-title {
+        @include font($size-title_main, 500);
+        color: white;
+
+        &-wrap {
+            @include displayFlex(center, flex-start, column);
+            gap: 8px;
+
+            width: 100%;
+        }
+    }
+
+    &-subTitle {
+        @include font($size-title_sub, 400);
+        color: white;
+
+        opacity: 0.8;
+    }
+}

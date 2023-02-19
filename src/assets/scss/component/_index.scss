@@ -1,0 +1,338 @@
+@import "./mixin";
+@import "./variables";
+
+.main {
+    @include displayFlex(center, flex-start, column);
+    gap: 184px;
+
+    background-color: #f9f8ff;
+}
+
+.help {
+    padding-top: 2px;
+
+    background-image: url(../assets/images/ourHelp/db/ourHelp-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+
+    &-wrapepr {
+        @include displayFlex(flex-start, flex-start, column);
+        gap: 32px;
+
+        width: 100%;
+    }
+
+    &-title {
+        max-width: 528px;
+        width: 100%;
+
+        @include font($size-title_section, 500);
+
+        color: #3b3e43;
+
+        &-wrap {
+            @include displayFlex(flex-start, flex-start, column);
+            gap: 24px;
+        }
+
+        &-info {
+            @include font($size-title_smal_section, 700);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+
+            color: #00a077;
+
+            opacity: 0.5;
+        }
+    }
+
+    &-list {
+        @include displayFlex(flex-start, flex-start);
+
+        flex-wrap: wrap;
+        gap: 25px 30px;
+    }
+
+    &-item {
+        max-width: 370px;
+        width: 100%;
+
+        height: 318px;
+
+        padding: 50px 23px 50px 40px;
+
+        border-radius: 15px;
+
+        background-color: #ffffff;
+        box-shadow: 0px 20px 50px rgba(59, 62, 67, 0.05);
+
+        @include displayFlex(flex-start, flex-start, column);
+        gap: 20px;
+
+        &__img {
+            width: 50px;
+            height: 50px;
+
+            object-fit: contain;
+        }
+
+        &__body {
+            @include displayFlex(flex-start, flex-start, column);
+            gap: 15px;
+
+            width: 100%;
+
+            &-title {
+                @include font($size-title_card, 700);
+                color: #3b3e43;
+            }
+
+            &-text {
+                @include font($size-text_card, 400);
+                color: #595e64;
+
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+
+                & span {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.process {
+    padding: 194px 0 184px;
+
+    background-image: url(../assets/images/ourProcess/db/ourProcess-db.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+
+    &-wrapper {
+        width: 100%;
+
+        @include displayFlex(center, flex-start, column);
+        gap: 32px;
+    }
+
+    &-title {
+        @include font($size-title_section, 500);
+        color: white;
+
+        &-wrap {
+            @include displayFlex(center, flex-start, column);
+
+            max-width: 718px;
+        }
+
+        &-info {
+            @include font($size-title_smal_section, 700);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+
+            color: white;
+
+            opacity: 0.5;
+        }
+    }
+
+    &-subTitle {
+        @include font($size-title_sub, 400);
+        color: white;
+
+        text-align: center;
+    }
+
+    &-list {
+        @include displayFlex(flex-start, flex-start, column);
+        gap: 40px;
+    }
+
+    &-item {
+        width: 100%;
+        height: 323px;
+
+        @include displayFlex(center, space-between);
+        gap: 60px;
+
+        padding: 20px 68px 24px 32px;
+
+        background-color: #ffffff;
+
+        box-shadow: 0px 20px 50px rgba(59, 62, 67, 0.05);
+        border-radius: 15px;
+
+        &__img {
+            width: 100%;
+            object-fit: contain;
+
+            &-wrap {
+                max-width: 479px;
+                width: 100%;
+            }
+        }
+
+        &__body {
+            @include displayFlex(flex-start, flex-start, column);
+            gap: 20px;
+
+            width: 100%;
+
+            &-content {
+                @include displayFlex(flex-start, flex-start, column);
+                gap: 15px;
+            }
+
+            &-title {
+                @include font($size-title_card, 700);
+                color: #3b3e43;
+            }
+
+            &-text {
+                @include font($size-text_card, 400);
+                color: #595e64;
+
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.brands {
+    width: 100%;
+
+    // padding: 184px 0;
+
+    &-wrapper {
+        width: 100%;
+
+        @include displayFlex(center, flex-start, column);
+        gap: 32px;
+    }
+
+    &-title {
+        @include font($size-title_section, 500);
+        color: #3b3e43;
+
+        text-align: center;
+
+        &-wrap {
+            @include displayFlex(center, flex-start, column);
+
+            max-width: 897px;
+            width: 100%;
+        }
+
+        &-info {
+            @include font($size-title_smal_section, 700);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+
+            color: #00a077;
+
+            opacity: 0.5;
+        }
+    }
+
+    &-body {
+        @include displayFlex(center, flex-start, column);
+        gap: 40px;
+
+        &-text {
+            @include font(16px, 400);
+            color: white;
+
+            text-align: center;
+
+            max-width: 381px;
+        }
+    }
+
+    &-list {
+        @include displayFlex(center, flex-start);
+        gap: 24px 112px;
+
+        flex-wrap: wrap;
+
+        width: 100%;
+    }
+
+    &-item {
+        max-width: 144px;
+
+        &__img {
+            width: 100%;
+
+            object-fit: contain;
+        }
+    }
+}
+
+.withus {
+    background: linear-gradient(249.78deg, #35d3ff -0.64%, #a963fb 103.6%);
+
+    width: 100%;
+    padding-top: 114px;
+    padding-bottom: 143px;
+
+    &-wrapper {
+        @include displayFlex(center, space-between);
+        gap: 20px;
+
+        width: 100%;
+    }
+
+    &-content {
+        max-width: 420px;
+        width: 100%;
+
+        @include displayFlex(flex-start, flex-start, column);
+        gap: 30px;
+    }
+
+    &-title {
+        @include font($size-title_section, 500);
+        color: white;
+
+        &-wrap {
+            @include displayFlex(flex-start, flex-start, column);
+            gap: 24px;
+        }
+
+        &-info {
+            @include font($size-title_smal_section, 700);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+
+            color: white;
+
+            opacity: 0.5;
+        }
+    }
+
+    &-subTitle {
+        @include font($size-title_sub, 400);
+        color: white;
+    }
+
+    &-img {
+        width: 100%;
+        object-fit: contain;
+
+        &-wrap {
+            max-width: 698px;
+        }
+    }
+}
